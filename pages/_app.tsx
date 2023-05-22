@@ -1,6 +1,14 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import 'styles/tailwind.css';
+type props={
+  Component:any,
+  pageProps:any
 }
+function MyApp({ Component, pageProps }:props) {
+  return (
+    <div className="bg-gray-900 py-56">
+      <Component {...pageProps} />
+    </div>
+  );
+}
+
+export default MyApp;
